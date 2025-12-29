@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Stok Bahan Ajar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <h2>Sistem Informasi Bahan Ajar</h2>
+  <a href="login.html">Logout</a>
+</div>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <a href="dashboard.html">Dashboard</a>
+  <a href="stock.html" class="active">Stok Bahan Ajar</a>
+  <a href="tracking.html">Tracking Pengiriman</a>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+  <div style="display:flex;justify-content:space-between;align-items:center;">
+    <h2>Stok Bahan Ajar</h2>
+    <button onclick="showModal('stokModal')" style="width:auto;">
+      + Tambah Stok
+    </button>
+  </div>
+
+  <!-- TABLE -->
+  <table id="stokTable" style="margin-top:20px;">
+    <tr>
+      <th>Nama Bahan Ajar</th>
+      <th>Stok</th>
+    </tr>
+  </table>
+</div>
+
+<!-- ================= MODAL TAMBAH STOK ================= -->
+<div class="modal" id="stokModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('stokModal')">&times;</span>
+    <h3>Tambah Stok Bahan Ajar</h3>
+
+    <div class="form-group">
+      <input type="text" id="namaBahan" placeholder="Nama Bahan Ajar">
+    </div>
+
+    <div class="form-group">
+      <input type="number" id="stokBahan" placeholder="Jumlah Stok">
+    </div>
+
+    <button onclick="tambahStok(); closeModal('stokModal')">
+      Simpan
+    </button>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+<script>
+  tampilkanStok();
+</script>
+
+</body>
+</html>

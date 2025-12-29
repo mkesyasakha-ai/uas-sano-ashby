@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tracking Pengiriman</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <h2>Sistem Informasi Bahan Ajar</h2>
+  <a href="login.html">Logout</a>
+</div>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <a href="dashboard.html">Dashboard</a>
+  <a href="stock.html">Stok Bahan Ajar</a>
+  <a href="tracking.html" class="active">Tracking Pengiriman</a>
+</div>
+
+<!-- CONTENT -->
+<!-- CONTENT -->
+<div class="content">
+
+  <h2>Tracking Pengiriman</h2>
+  <p class="subtitle">
+    Masukkan nomor Delivery Order (DO) untuk melihat status pengiriman.
+  </p>
+
+  <!-- SEARCH CARD -->
+  <div class="card tracking-card">
+    <div class="tracking-form">
+      <input type="text" id="noDO" placeholder="Contoh: DO001">
+      <button onclick="cariPengiriman()">Cari Pengiriman</button>
+    </div>
+  </div>
+
+  <!-- RESULT CARD -->
+  <div class="card">
+    <table class="table-pengiriman">
+      <thead>
+        <tr>
+          <th>No DO</th>
+          <th>Nama</th>
+          <th>Status</th>
+          <th>Ekspedisi</th>
+          <th>Tanggal</th>
+          <th>Paket</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody id="hasilTracking">
+        <tr>
+          <td colspan="7" style="text-align:center;color:#94a3b8;">
+            Silakan cari nomor Delivery Order
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= LOGIN CONTAINER ================= -->
+<div class="auth-container" id="authContainer">
+  <div class="login-box card">
+
+    <h2 class="auth-title">Welcome Back</h2>
+    <p class="auth-subtitle">Silakan login untuk melanjutkan</p>
+
+    <div class="form-group">
+      <input type="email" id="email" placeholder="Email" required>
+    </div>
+
+    <div class="form-group">
+      <input type="password" id="password" placeholder="Password" required>
+    </div>
+
+    <button class="btn-primary" onclick="login()">Login</button>
+
+    <div class="auth-links">
+      <a href="#" onclick="showModal('forgotModal')">Lupa Password?</a>
+      <span>|</span>
+      <a href="#" onclick="showModal('registerModal')">Daftar</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- ================= SUCCESS POPUP ================= -->
+<div class="popup success" id="successPopup">
+  <div class="checkmark">
+    <span></span>
+  </div>
+  <h3>Login Berhasil</h3>
+  <p>Mengalihkan ke dashboard...</p>
+
+  <!-- LOADING BAR -->
+  <div class="loading-bar">
+    <span></span>
+  </div>
+</div>
+
+<!-- ================= ERROR POPUP ================= -->
+<div class="popup error" id="errorPopup">
+  <h3>Login Gagal</h3>
+  <p>Email atau password salah</p>
+</div>
+
+<!-- ================= MODAL LUPA PASSWORD ================= -->
+<div class="modal" id="forgotModal">
+  <div class="modal-content">
+    <span onclick="closeModal('forgotModal')" class="close">&times;</span>
+    <h3>Lupa Password</h3>
+    <p>Silakan hubungi admin untuk melakukan reset password.</p>
+  </div>
+</div>
+
+<!-- ================= MODAL DAFTAR ================= -->
+<div class="modal" id="registerModal">
+  <div class="modal-content">
+    <span onclick="closeModal('registerModal')" class="close">&times;</span>
+    <h3>Daftar Akun</h3>
+    <p>Fitur pendaftaran belum tersedia.</p>
+  </div>
+</div>
+
+<!-- ================= SCRIPT ================= -->
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
