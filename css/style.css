@@ -192,6 +192,7 @@ body {
    LOGIN
 ================================ */
 .auth-container {
+  background-color: #0369a1;
   min-height: 100vh;
   display: flex;
   align-items: center;
